@@ -4,20 +4,3 @@ eureka:
       defaultZone: https://eureka-server-production.up.railway.app/eureka
   instance:
     preferIpAddress: true
-spring:
-   application:
-      name: gateway-service
-   cloud:
-      gateway:
-         discovery:
-            locator:
-               enabled: true
-         routes:
-            - id: evaluation
-              uri: lb://EVALUATION-SERVICE
-              predicates:
-              - Path=/**
-            - id: booking
-              uri: lb://BOOKING-SERVICE
-              predicates:
-              - Path=/**
