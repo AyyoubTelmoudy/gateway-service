@@ -10,7 +10,7 @@ spring:
         - id: r1
           uri: https://evaluation-microservice-production.up.railway.app/
           predicates:
-            - Path= /evaluation/**
+            - Path= /drivers/**
         - id: r2
           uri: https://booking-microservice-production.up.railway.app/
           predicates:
