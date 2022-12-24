@@ -14,4 +14,4 @@ spring:
         - id: r2
           uri: https://booking-microservice-production.up.railway.app/
           predicates:
-            - Path= /booking/**
+            - Path= /announcements/**
