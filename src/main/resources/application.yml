@@ -2,7 +2,7 @@ eureka:
   client:
     serviceUrl:
       defaultZone: https://eureka-server-production.up.railway.app/eureka
-  
+
 spring:
   cloud:
     gateway:
@@ -15,3 +15,7 @@ spring:
           uri: https://booking-microservice-production.up.railway.app/
           predicates:
             - Path= /booking/**
+        - id: r3
+          uri: https://authentication-microservice-production.up.railway.app/
+          predicates:
+            - Path= /auth/**
