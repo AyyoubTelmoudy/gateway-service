@@ -5,7 +5,7 @@ eureka:
 
 spring:
   cloud:
-    gateway:
+     gateway:
       routes:
         - id: r1
           uri: https://evaluation-microservice-production.up.railway.app/
@@ -19,3 +19,7 @@ spring:
           uri: https://authentication-microservice-production.up.railway.app/
           predicates:
             - Path= /auth/**
+        - id: r4
+          uri: https://announces-microserver-production.up.railway.app/
+          predicates:
+            - Path= /announces/**
